@@ -1,0 +1,125 @@
+@import url('https://fonts.google.com/specimen/Lexend+Deca');
+@import url('https://fonts.google.com/specimen/Big+Shoulders+Display');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --big-font: 'Lexend Deca',sanseif;
+    --small-font: 'Big Shoulders Display',sanserif;
+
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+
+    --card-padding:20px 50px;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5% 0;
+    background: var(--Very-light-gray-background-headings-buttons);
+}
+section div.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+    min-height: 80vh;
+}
+div.wrapper div.card{
+    width: 33.33%;
+    padding: var(--card-padding);
+    background-color: var(--Bright-orange);
+    border-radius: 15px;
+    position: relative;
+    min-height: 60vh;
+}
+div.wrapper div.card:nth-child(2){
+    background: var(--Dark-cyan);
+}
+div.wrapper div.card:nth-child(3){
+    background: var(--Very-dark-cyan);
+}
+div.card h1{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: var(--Very-light-gray-background-headings-buttons);
+}
+p{
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 17px;
+    color: var(--Transparent-white-paragraphs);
+}
+figcaption{
+    margin: 40px 0;
+}
+figcaption .info-head{
+    margin: 20px 0;
+}
+figcaption .info{
+    margin: 40px 0;
+}
+button{
+    position: absolute;
+    bottom: 25px ;
+    width: 120px;
+    height: 40px;
+    border-radius: 25px;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+button.bright{
+    color: var(--Bright-orange) ;
+}
+button.bright:hover{
+    background-color: var(--Bright-orange);
+    color: var(--Very-light-gray-background-headings-buttons);
+    border: 1px solid var(--Very-light-gray-background-headings-buttons);
+}
+button.dark{
+    color: var(--Dark-cyan);
+}
+button.dark:hover{
+    background-color: var(--Dark-cyan);
+    color: var(--Very-light-gray-background-headings-buttons);
+    border: 1px solid var(--Very-light-gray-background-headings-buttons);
+}
+button.very{
+    color: var(--Very-dark-cyan);
+}
+button.very:hover{
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-gray-background-headings-buttons);
+    border:1px solid var(--Very-light-gray-background-headings-buttons);
+}
+@media screen and (max-width:860px) {
+    div.wrapper div.card{
+        padding: 20px 20px;
+    }
+    button{
+        bottom: 10px;
+    }
+}
+@media screen and (max-width: 645px) {
+    section div.wrapper{
+        flex-direction: column  ;
+    }
+    div.wrapper div.card{
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    div.wrapper div.card{
+        width: 100%;
+    }
+}
